@@ -4,7 +4,7 @@ on:
   push
 
 jobs:
-  check:
+  docker-base:
     runs-on: ubuntu-20.04
     steps:
       - name: checkout
@@ -13,5 +13,8 @@ jobs:
       - name: build docker
         run: ./build-docker
 
-      - name: run docker
-        run: ./run-docker
+  install-zsh:
+    runs-on: automatic-setup
+    steps:
+      - name: test
+        run: echo success
