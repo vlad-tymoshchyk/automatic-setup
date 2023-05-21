@@ -12,9 +12,6 @@ jobs:
 
       - name: build docker
         run: ./build-docker
-
-      - name: install zsh
-        run: echo test && bash ./checks/zsh
           
       # - name: publish docker image
       #   uses: actions/upload-artifact@v3

@@ -10,4 +10,6 @@ RUN apt update && apt install -y curl
 # RUN curl https://raw.githubusercontent.com/vlad-tymoshchyk/automatic-setup/master/install-script.bash | bash
 RUN bash install-script.bash 
 
+RUN ansible-playbook --tags zsh local.yml && bash ./checks/zsh
+
 CMD ["./post_install/run_after"]
