@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: build docker
-        run: docker build . -t automatic-setup
+        run: ./build-docker
 
       - name: run docker
-        run: docker run -t automatic-setup bash -c "echo success"
+        run: ./run-docker
