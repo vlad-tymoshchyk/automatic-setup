@@ -1,0 +1,20 @@
+name: 'ci'
+
+on:
+  push:
+
+jobs:
+  docker-base:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: one
+        run: echo "some test here" > test
+
+      - name: tww
+        run: cat test
+
+      - name: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: some-file
+          path: ./test
