@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
 WORKDIR /home/vtymoshchyk 
-COPY . .
+COPY ./post_install ./post_install
 
-CMD ["./run_after"]
+CMD ["./post_install/run_after/"]
