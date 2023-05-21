@@ -7,8 +7,11 @@ jobs:
   check:
     runs-on: ubuntu-20.04
     steps:
-      - name: initial
-        run: echo "Here you are"
+      - name: checkout
+        uses: actions/checkout@v3
 
-      - name: docker test
-        run: docker run -t ubuntu bash -c "which whichhhh"
+      - name: build docker
+        run: docker build . -t automatic-setup
+
+      - name: run docker
+        run: docker run -t automatic-setup bash -c "echo success"
