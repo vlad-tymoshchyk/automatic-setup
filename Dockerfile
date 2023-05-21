@@ -3,4 +3,4 @@ FROM ubuntu:latest
 WORKDIR /home/vtymoshchyk 
 COPY . .
 
-CMD ["bash"]
+CMD ["./run_after"]
