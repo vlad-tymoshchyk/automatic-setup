@@ -9,3 +9,6 @@ jobs:
     steps:
       - name: initial
         run: echo "Here you are"
+
+      - name: docker test
+        run: docker run -t ubuntu bash -c "echo here"
