@@ -1,0 +1,11 @@
+name: 'ci'
+
+on:
+  push
+
+jobs:
+  check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: initial
+        run: echo "Here you are"
