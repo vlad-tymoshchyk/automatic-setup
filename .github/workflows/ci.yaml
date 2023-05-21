@@ -14,8 +14,11 @@ jobs:
         run: ./build-docker
 
   install-zsh:
-    needs: docker-base 
-    runs-on: automatic-setup
+    needs: docker-base
+    runs-on: ubuntu-20.04
     steps:
-      - name: test
-        run: echo success
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: run docker
+        run: ./run-docker
