@@ -14,6 +14,7 @@ jobs:
         run: ./build-docker
 
   install-zsh:
+    needs: docker-base 
     runs-on: automatic-setup
     steps:
       - name: test
