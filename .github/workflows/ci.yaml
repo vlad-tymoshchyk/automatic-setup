@@ -11,4 +11,4 @@ jobs:
         run: echo "Here you are"
 
       - name: docker test
-        run: docker run -t ubuntu bash -c "echo here"
+        run: docker run -t ubuntu bash -c "which whichhhh"
