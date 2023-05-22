@@ -3,4 +3,4 @@
 source ./utils.bash
 
 _expect_exists /usr/bin/zsh
-# _expect_dir_exists ~/.oh-my-zsh
+_expect_dir_exists ~/.oh-my-zsh
